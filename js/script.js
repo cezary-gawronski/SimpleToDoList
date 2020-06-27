@@ -54,11 +54,11 @@
 
     for (const task of tasks) {
       htmlString += `
-      <li
-      ${task.done ? "class=\"todoList__item--done\"" : ""}>
-      <button class="todoForm__button todoForm__button--done js-done">Zrobione?</button>
-      <button class="todoForm__button todoForm__button--remove js-remove">usuń</button>
-      ${task.content}
+      <li 
+      ${task.done ? "class=\"todoList__item--done\"" : "class =\"todoList__item\""}>
+      <button class="todoForm__button todoForm__button--done js-done"></button>
+      <span class = "todoList__itemContent">${task.content}</span>
+      <button class="todoForm__button todoForm__button--remove js-remove"></button>
       </li>`;
     }
     document.querySelector(".js-tasks").innerHTML = htmlString;
