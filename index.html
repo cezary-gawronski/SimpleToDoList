@@ -19,10 +19,17 @@
     <title>Prosta lista zadań</title>
   </head>
   <body>
-    <form class="js-form">
-      <input type="text" />
-      <button class="js-newTask">Dodaj zadanie</button>
-    </form>
-    <ul class="js-tasks"></ul>
+    <main>
+      <section class="todoListApp">
+        <h1 class="todoListApp__title"></h1>
+        <form class="todoForm js-form">
+          <input class="todoForm__input js-newTask" type="text" />
+          <button class="todoForm__buttonApp js-newTask">Dodaj zadanie</button>
+        </form>
+        <div class="todoListContainer">
+          <ul class="todoList js-tasks"></ul>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

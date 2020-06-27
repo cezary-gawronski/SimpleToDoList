@@ -14,4 +14,30 @@ body {
   box-sizing: inherit;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
+  background-color: bisque;
+}
+
+.todoListApp {
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoForm {
+}
+
+.todoListContainer {
+}
+
+.todoList {
+}
+
+.todoList__item {
+}
+.todoList__item--done {
+  text-decoration-line: line-through;
 }
