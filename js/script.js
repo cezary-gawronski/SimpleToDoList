@@ -1,4 +1,5 @@
 {
+
   const tasks = [
     {
       content: "nagrać lekcję",
@@ -11,6 +12,14 @@
 
     },
   ];
+
+  const clearTaskInput = () => {
+    document.querySelector(".js-newTask").value = "";
+  };
+
+  const setFocusTaskInput = () => {
+    document.querySelector(".js-newTask").focus();
+  };
 
 
   const addNewTasks = (newTaskContent) => {
@@ -56,10 +65,10 @@
       htmlString += `
       <li class="todoList__item ${task.done ? "todoList__item--done\"" : "\"todoList__item\""}>
       
-      <button class="todoForm__button todoForm__button--done js-done"></button>
-      <span class = "todoList__itemContent">${task.content}</span>
-      <button class="todoForm__button todoForm__button--remove js-remove"></button>
-      </li>`;
+      <button class="todoForm__button todoForm__button--done js-done">${task.done ? "&#10004;" : ""}</button >
+        <span class="todoList__itemContent">${task.content}</span>
+        <button class="todoForm__button todoForm__button--remove js-remove"></button>
+      </li > `;
     }
     document.querySelector(".js-tasks").innerHTML = htmlString;
     bindEvents();
@@ -75,6 +84,9 @@
       return;
     }
     addNewTasks(newTaskContent);
+    clearTaskInput();
+    setFocusTaskInput();
+
   };
 
 

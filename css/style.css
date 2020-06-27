@@ -92,6 +92,7 @@ body {
 @media (max-width: 457px) {
   .todoForm__buttonAdd {
     margin-top: 20px;
+    flex-basis: 100%;
   }
 }
 
@@ -104,6 +105,7 @@ body {
 }
 
 .todoList__item {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,6 +114,7 @@ body {
   margin: 10px 0;
   padding: 10px 0;
   border-bottom: 1px solid black;
+  z-index: 0;
 }
 
 .todoList__itemContent {
@@ -122,10 +125,22 @@ body {
 }
 
 .todoList__item--done {
-  text-decoration-line: line-through;
-  text-decoration-color: red;
+  /* text-decoration-line: line-through; */
+  /* text-decoration-color: red; */
   color: gray;
 }
+
+.todoList__item--done::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  right: 60px;
+  transform: rotate(-2deg);
+  border-top: 1px solid red;
+}
+
 .todoForm__button {
   flex-shrink: 0;
   border: none;
@@ -135,9 +150,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  text-decoration-line: none;
 }
 .todoForm__button--done {
   background-image: url("/img/green.png");
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .todoForm__button--remove {
