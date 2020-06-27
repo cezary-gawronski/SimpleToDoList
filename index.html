@@ -21,9 +21,12 @@
   <body>
     <main>
       <section class="todoListApp">
-        <h1 class="todoListApp__title"></h1>
+        <h1 class="todoListApp__title">Lista zadań</h1>
         <form class="todoForm js-form">
-          <input class="todoForm__input js-newTask" type="text" />
+          <label class="todoForm__label" for="newTask"
+            >Dodaj nowe zadanie</label
+          >
+          <input class="todoForm__input js-newTask" id="newTask" type="text" />
           <button class="todoForm__buttonAdd js-newTask">Dodaj zadanie</button>
         </form>
         <div class="todoListContainer">

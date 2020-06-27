@@ -17,33 +17,85 @@ body {
   background-color: bisque;
 }
 
+.todoListApp__title {
+  align-self: flex-start;
+}
+
+@media (max-width: 457px) {
+  .todoListApp__title {
+    align-self: unset;
+  }
+}
+
 .todoListApp {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 50vh;
   max-width: 800px;
   margin: 0 auto;
   padding: 15px;
 }
 
 .todoForm {
+  position: relative;
   display: flex;
   justify-content: space-between;
   background-color: rgb(241, 202, 151);
   width: 100%;
-  padding: 30px;
+  padding: 50px 30px 30px;
+}
+
+@media (max-width: 457px) {
+  .todoForm {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 15px 15px;
+  }
+}
+
+.todoForm__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 0 0 30px;
+}
+
+@media (max-width: 457px) {
+  .todoForm__label {
+    position: initial;
+    padding: 0px;
+    margin-bottom: 15px;
+  }
 }
 
 .todoForm__input {
+  border: none;
   flex-basis: 75%;
   margin-right: 20px;
   padding: 10px;
 }
 
+@media (max-width: 457px) {
+  .todoForm__input {
+    flex-basis: 100%;
+    margin-right: 0px;
+  }
+}
+
+.todoForm__buttonAdd {
+  border: none;
+  padding: 5px 15px;
+}
+
+@media (max-width: 457px) {
+  .todoForm__buttonAdd {
+    margin-top: 20px;
+  }
+}
+
 .todoListContainer {
-  /* border: 1px solid red; */
   width: 100%;
 }
 
@@ -71,6 +123,8 @@ body {
 
 .todoList__item--done {
   text-decoration-line: line-through;
+  text-decoration-color: red;
+  color: gray;
 }
 .todoForm__button {
   flex-shrink: 0;
@@ -83,10 +137,9 @@ body {
   background-position: center;
 }
 .todoForm__button--done {
-  background-image: url("/img/white-heavy-check-mark_2705.png");
+  background-image: url("/img/green.png");
 }
 
 .todoForm__button--remove {
   background-image: url("/img/no-entry_26d4.png");
-  /* justify-self: flex-end; */
 }

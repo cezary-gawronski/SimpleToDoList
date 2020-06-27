@@ -54,8 +54,8 @@
 
     for (const task of tasks) {
       htmlString += `
-      <li 
-      ${task.done ? "class=\"todoList__item--done\"" : "class =\"todoList__item\""}>
+      <li class="todoList__item ${task.done ? "todoList__item--done\"" : "\"todoList__item\""}>
+      
       <button class="todoForm__button todoForm__button--done js-done"></button>
       <span class = "todoList__itemContent">${task.content}</span>
       <button class="todoForm__button todoForm__button--remove js-remove"></button>
