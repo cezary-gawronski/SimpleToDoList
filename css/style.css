@@ -143,12 +143,12 @@ body {
   text-decoration-line: none;
 }
 .todoForm__button--done {
-  background-image: url("/img/green.png");
+  background-image: url("./img/green.png");
   color: white;
   font-weight: bold;
   font-size: 20px;
 }
 
 .todoForm__button--remove {
-  background-image: url("/img/no-entry_26d4.png");
+  background-image: url("./img/no-entry_26d4.png");
 }
