@@ -1,17 +1,6 @@
 {
 
-  const tasks = [
-    {
-      content: "nagrać lekcję",
-      done: false,
-    },
-
-    {
-      content: "zjeść pierogi",
-      done: true,
-
-    },
-  ];
+  const tasks = [];
 
   const clearTaskInput = () => {
     document.querySelector(".js-newTask").value = "";
@@ -63,12 +52,14 @@
 
     for (const task of tasks) {
       htmlString += `
+      <div class="todoList__itemFlex">
+      <button class="todoForm__button todoForm__button--done js-done">${task.done ? "&#10004;" : ""}</button>
       <li class="todoList__item ${task.done ? "todoList__item--done\"" : "\"todoList__item\""}>
-      
-      <button class="todoForm__button todoForm__button--done js-done">${task.done ? "&#10004;" : ""}</button >
-        <span class="todoList__itemContent">${task.content}</span>
-        <button class="todoForm__button todoForm__button--remove js-remove"></button>
-      </li > `;
+      ${task.content}
+      </li>
+      <button class="todoForm__button todoForm__button--remove js-remove"></button>
+      </div>
+      `;
     }
     document.querySelector(".js-tasks").innerHTML = htmlString;
     bindEvents();

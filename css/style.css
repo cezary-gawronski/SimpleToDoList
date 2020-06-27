@@ -100,45 +100,35 @@ body {
   width: 100%;
 }
 
+.todoList__itemFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(202, 169, 126);
+}
+
 .todoList {
   padding: 0;
 }
 
 .todoList__item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  list-style: none;
-  margin: 10px 0;
-  padding: 10px 0;
-  border-bottom: 1px solid black;
-  z-index: 0;
+  flex-basis: 700px;
+  margin: 10px 50px;
+  padding: 20px;
 }
 
-.todoList__itemContent {
-  flex-basis: 700px;
-  flex-shrink: 1;
-  padding: 15px;
-  margin: 0 15px;
+@media (max-width: 457px) {
+  .todoList__item {
+    margin-left: 30px;
+    margin-right: 0px;
+    padding: 20px 5px;
+  }
 }
 
 .todoList__item--done {
-  /* text-decoration-line: line-through; */
-  /* text-decoration-color: red; */
+  text-decoration-color: red;
+  text-decoration-line: line-through;
   color: gray;
-}
-
-.todoList__item--done::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 60px;
-  right: 60px;
-  transform: rotate(-2deg);
-  border-top: 1px solid red;
 }
 
 .todoForm__button {
