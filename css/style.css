@@ -38,6 +38,8 @@ body {
 
 .todoList__item {
 }
+.todoForm__buttonRemove {
+}
 .todoList__item--done {
   text-decoration-line: line-through;
 }
